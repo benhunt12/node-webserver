@@ -52,7 +52,13 @@ app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Uable to fulfill request'
     })
-})
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Current Projects'
+    });
+});
 
 app.listen(PORT, () => {
     console.log(`Server is up on port ${PORT}`);
